@@ -19,6 +19,10 @@
       ></div>
     </div>
 
+    <div class="modal-container">
+      <div class="modal-content" id="modal"></div>
+    </div>
+
     <noscript>
       <h1 class="page-title">Outline Home</h1>
       <div class="content">

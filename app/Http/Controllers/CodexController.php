@@ -15,16 +15,19 @@ class CodexController extends Controller
     $isHtmx = $request->hasHeader('HX-Request');
 
     $codexEntries = Codex::orderBy('type')->orderBy('name')->get()->groupBy('type');
-    return view('outline.codex.index', compact('codexEntries'))
+    return view('outline.codex.index', compact('codexEntries', 'isHtmx'))
       ->fragmentIf($isHtmx, 'codex-entry-list');
   }
 
   /**
    * Show the form for creating a new codex entry.
    */
-  public function create()
+  public function create(Request $request)
   {
-    return view('outline.codex.create');
+    $isHtmx = $request->hasHeader('HX-Request');
+
+    return view('outline.codex.create')
+      ->fragmentIf($isHtmx, 'create-codex-form');
   }
 
   /**
@@ -47,9 +50,12 @@ class CodexController extends Controller
   /**
    * Display the specified codex entry.
    */
-  public function show(Codex $codex)
+  public function show(Request $request, Codex $codex)
   {
-    return view('outline.codex.show', compact('codex'));
+    $isHtmx = $request->hasHeader('HX-Request');
+
+    return view('outline.codex.show', compact('codex'))
+      ->fragmentIf($isHtmx, 'codex-details');
   }
 
   /**

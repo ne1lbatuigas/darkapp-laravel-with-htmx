@@ -3,6 +3,7 @@
 @section('content')
   <h1 class="page-title">Codex Entry Details</h1>
 
+  @fragment('codex-details')
   <div class="codex-details content" id="codex-details-{{ $codex->id }}">
     <h2>{{ $codex->name }}</h2>
 
@@ -37,4 +38,5 @@
       </form>
     </div>
   </div>
+  @endfragment
 @endsection

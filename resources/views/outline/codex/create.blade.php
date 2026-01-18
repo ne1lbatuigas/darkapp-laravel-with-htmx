@@ -3,6 +3,7 @@
 @section('content')
   <h1 class="page-title">Create New Codex Entry</h1>
 
+  @fragment('create-codex-form')
   <div class="codex-create-form content">
     <form method="POST" action="{{ route('outline.codex.store') }}">
       @csrf
@@ -50,4 +51,5 @@
       </div>
     </form>
   </div>
+  @endfragment
 @endsection
