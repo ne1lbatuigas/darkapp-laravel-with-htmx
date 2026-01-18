@@ -48,7 +48,7 @@ class CodexController extends Controller
     if ($isHtmx) {
       $codexEntries = Codex::orderBy('type')->orderBy('name')->get()->groupBy('type');
       return view('outline.codex.index', compact('codexEntries', 'isHtmx'))
-        ->fragment('codex-entry-list');
+        ->fragments(['codex-entry-list', 'modal']);
     }
 
     return redirect()->route('outline.codex.show', $codex)

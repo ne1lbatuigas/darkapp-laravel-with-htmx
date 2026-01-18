@@ -17,7 +17,7 @@
     </div>
     <div class="chapter-actions">
       <a href="{{ route('outline.chapters.index') }}" class="btn">
-        Go back to full chapter timeline
+        Go to the full chapter timeline
       </a>
       <a href="{{ route('outline.chapters.edit', $chapter) }}" class="btn">
         Edit Chapter

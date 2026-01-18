@@ -51,4 +51,8 @@
 
   </div>
   @endfragment
+  
+  @fragment('modal')
+  <div class="modal-content" id="modal" hx-swap-oob="true"></div>
+  @endfragment
 @endsection

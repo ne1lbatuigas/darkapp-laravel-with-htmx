@@ -19,7 +19,7 @@
 
     <div class="codex-actions">
       <a href="{{ route('outline.codex.index') }}" class="btn">
-        Go back to Full Codex
+        Go to the full codex
       </a>
       <a href="{{ route('outline.codex.edit', $codex) }}" class="btn">
         Edit Codex Entry
